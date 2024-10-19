@@ -16,7 +16,6 @@ import { createContext, useEffect, useState } from "react";
               },
             }
           );
-          // console.log(data);
           setCount(data.numOfCartItems);
         } catch (error) {
           setCount(0);

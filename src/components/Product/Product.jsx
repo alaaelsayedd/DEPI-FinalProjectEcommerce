@@ -50,9 +50,7 @@ function Product({ product }) {
         },
       }
     );
-   
   }
-  
 
   async function getUserCart() {
     try {
@@ -77,12 +75,10 @@ function Product({ product }) {
           headers: {
             token: localStorage.getItem("token"),
           },
-
         }
       );
-      const ids = data.data.map(item => item.id);
+      const ids = data.data.map((item) => item.id);
       setWishList(ids);
-      console.log(data.data);
     } catch (error) {
       setIsloading(false);
     }
@@ -95,7 +91,7 @@ function Product({ product }) {
         setIsAddToWishList(true);
       }
     });
-  }, [WishList,product.id]);
+  }, [WishList, product.id]);
   return (
     <div className=" p-4   hover:shadow-green-500 shadow-lg  rounded transition-all duration-150">
       <Link to={`/productdetails/${product.id}`}>

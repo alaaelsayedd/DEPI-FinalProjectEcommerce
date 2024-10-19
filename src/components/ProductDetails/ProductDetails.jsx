@@ -2,7 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../Loading/Loading";
-import { toast } from "react-toastify";
+import { Bounce, toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 
 function ProductDetails() {
@@ -43,7 +44,7 @@ function ProductDetails() {
       draggable: true,
       progress: undefined,
       theme: "light",
-      transition: "Bounce",
+      transition: Bounce,
     });
 
    
